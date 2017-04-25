@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Iun-Tz-QGK">
+            <objects>
+                <viewController id="GAu-O2-fAr" customClass="ViewController" customModule="Dota2Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3go-h0-4QW"/>
+                        <viewControllerLayoutGuide type="bottom" id="UyL-cO-9vR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bRK-X3-Xkf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-Wi-0JK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueMatchCell" rowHeight="87" id="BRx-eJ-50t" customClass="LeagueMatchCell" customModule="Dota2Stats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BRx-eJ-50t" id="xpH-I6-ZP4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-2K-eHu" userLabel="First Team Label">
+                                                    <rect key="frame" x="16" y="33" width="56" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.64203774930000002" green="0.80266940590000002" blue="0.99919462199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iog-qT-7Va" userLabel="Versus Label">
+                                                    <rect key="frame" x="179" y="33" width="18" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvz-Ub-8Jw" userLabel="Second Team Label">
+                                                    <rect key="frame" x="301" y="33" width="58" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.85794937609999999" green="0.26297631859999998" blue="0.2044351995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4q-Mc-ZJX" userLabel="ID Label">
+                                                    <rect key="frame" x="16" y="4" width="12" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DvG-2K-eHu" firstAttribute="centerY" secondItem="xpH-I6-ZP4" secondAttribute="centerY" id="07D-je-HMp"/>
+                                                <constraint firstItem="N4q-Mc-ZJX" firstAttribute="leading" secondItem="xpH-I6-ZP4" secondAttribute="leading" constant="16" id="9cd-FA-pI8"/>
+                                                <constraint firstItem="DvG-2K-eHu" firstAttribute="leading" secondItem="xpH-I6-ZP4" secondAttribute="leading" constant="16" id="IO4-18-jRC"/>
+                                                <constraint firstItem="iog-qT-7Va" firstAttribute="centerY" secondItem="xpH-I6-ZP4" secondAttribute="centerY" id="Pdn-tw-Ed3"/>
+                                                <constraint firstAttribute="trailing" secondItem="pvz-Ub-8Jw" secondAttribute="trailing" constant="16" id="Qno-cQ-Obf"/>
+                                                <constraint firstItem="N4q-Mc-ZJX" firstAttribute="top" secondItem="xpH-I6-ZP4" secondAttribute="top" constant="4" id="Yvq-UF-OuW"/>
+                                                <constraint firstItem="pvz-Ub-8Jw" firstAttribute="centerY" secondItem="xpH-I6-ZP4" secondAttribute="centerY" id="jXU-4L-9cp"/>
+                                                <constraint firstItem="iog-qT-7Va" firstAttribute="centerX" secondItem="xpH-I6-ZP4" secondAttribute="centerX" id="uHI-he-IJ0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstTeamLabel" destination="DvG-2K-eHu" id="WJm-Xn-InE"/>
+                                            <outlet property="identifierLabel" destination="N4q-Mc-ZJX" id="Hy9-LB-NNi"/>
+                                            <outlet property="secondTeamLabel" destination="pvz-Ub-8Jw" id="MYy-Fv-0sD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GAu-O2-fAr" id="liO-Gb-yQ2"/>
+                                    <outlet property="delegate" destination="GAu-O2-fAr" id="xKW-zn-cFs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UyL-cO-9vR" firstAttribute="top" secondItem="QCO-Wi-0JK" secondAttribute="bottom" id="RCi-vg-ldI"/>
+                            <constraint firstItem="QCO-Wi-0JK" firstAttribute="leading" secondItem="bRK-X3-Xkf" secondAttribute="leading" id="bd7-vA-Piy"/>
+                            <constraint firstAttribute="trailing" secondItem="QCO-Wi-0JK" secondAttribute="trailing" id="io7-Ib-j1Z"/>
+                            <constraint firstItem="QCO-Wi-0JK" firstAttribute="top" secondItem="bRK-X3-Xkf" secondAttribute="top" id="npK-iL-bYC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="QCO-Wi-0JK" id="gy0-s3-NIM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWb-mU-TTb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="219"/>
+        </scene>
+    </scenes>
+</document>
