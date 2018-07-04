@@ -10,18 +10,41 @@
 import SwiftyJSON
 
 
-class Team {
+struct Team {
 
-    let teamID: Int;
-    let teamName: String;
-    let teamLogo: String;
-    let complete: Bool;
+    let id: Int
+    let name: String
+    let logo: String?
+    let isComplete: Bool
 
-    init (_ attributes: JSON) {
-        teamID = attributes["team_id"].intValue;
-        teamName = attributes["team_name"].stringValue;
-        teamLogo = attributes["team_logo"].stringValue;
-        complete = attributes["complete"].boolValue;
+    init?(_ attributes: JSON) {
+        guard let id = attributes["team_id"].int,
+            let name = attributes["team_name"].string,
+            let isComplete = attributes["complete"].bool else {
+                return nil
+        }
+        self.id = id
+        self.name = name
+        self.isComplete = isComplete
+        logo = attributes["team_logo"].string
+    }
+    
+}
+
+
+extension Team: Equatable {
+
+    public static func ==(lhs: Team, rhs: Team) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+}
+
+
+extension Team: CustomStringConvertible {
+
+    var description: String {
+        return "{ teamID: \(id), teamName: \(name) }"
     }
     
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mFf-G2-8eD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Match Details Controller-->
+        <scene sceneID="q89-qH-Adc">
+            <objects>
+                <viewController id="mFf-G2-8eD" customClass="MatchDetailsController" customModule="Dota2Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ved-aF-HDr"/>
+                        <viewControllerLayoutGuide type="bottom" id="biP-oV-ZWm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jui-hf-tjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-a0-WEl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A8L-QR-jsU">
+                                    <size key="itemSize" width="375" height="44"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hgF-a0-WEl" secondAttribute="trailing" id="8wB-Ge-0w2"/>
+                            <constraint firstItem="biP-oV-ZWm" firstAttribute="top" secondItem="hgF-a0-WEl" secondAttribute="bottom" id="eDz-5Y-K8h"/>
+                            <constraint firstItem="hgF-a0-WEl" firstAttribute="top" secondItem="jui-hf-tjI" secondAttribute="top" id="erH-nt-S4F"/>
+                            <constraint firstItem="hgF-a0-WEl" firstAttribute="leading" secondItem="jui-hf-tjI" secondAttribute="leading" id="rgZ-5M-lLn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="hgF-a0-WEl" id="nTE-VT-g73"/>
+                        <outlet property="collectionViewLayout" destination="A8L-QR-jsU" id="Ohs-WQ-jfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ln9-u9-o29" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="89.505247376311857"/>
+        </scene>
+    </scenes>
+</document>

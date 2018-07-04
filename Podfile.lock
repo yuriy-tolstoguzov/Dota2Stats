@@ -1,43 +1,81 @@
 PODS:
-  - Alamofire (4.4.0)
-  - Moya/Core (8.0.3):
+  - Alamofire (4.7.2)
+  - Differentiator (3.0.2)
+  - Kingfisher (4.8.0)
+  - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (8.0.3):
+  - Moya/RxSwift (11.0.2):
     - Moya/Core
-    - RxSwift (~> 3.0)
-  - ReactorKit (0.2.0):
-    - RxSwift (>= 3.0.0)
-  - Result (3.2.1)
-  - RxCocoa (3.4.0):
-    - RxSwift (~> 3.4)
-  - RxExpect (0.5.1):
-    - RxCocoa (>= 3.0)
-    - RxSwift (>= 3.0)
-    - RxTest (>= 3.0)
-  - RxSwift (3.4.0)
-  - RxTest (3.4.0):
-    - RxSwift (~> 3.4)
-  - SwiftyJSON (3.1.4)
+    - RxSwift (~> 4.0)
+  - Nimble (7.1.2)
+  - PureLayout (3.0.2)
+  - Quick (1.3.0)
+  - ReactorKit (1.1.0):
+    - RxSwift (>= 4.0.0)
+  - Result (3.2.4)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - RxSwiftExt (3.2.0):
+    - RxSwiftExt/Core (= 3.2.0)
+  - RxSwiftExt/Core (3.2.0):
+    - RxSwift (~> 4.0)
+  - SwiftGen (5.3.0)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - Moya/RxSwift
+  - Nimble
+  - PureLayout
+  - Quick
   - ReactorKit
-  - RxExpect
-  - RxTest
+  - RxCocoa
+  - RxDataSources
+  - RxSwiftExt
+  - SwiftGen
   - SwiftyJSON
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Differentiator
+    - Kingfisher
+    - Moya
+    - Nimble
+    - PureLayout
+    - Quick
+    - ReactorKit
+    - Result
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - RxSwiftExt
+    - SwiftGen
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
-  ReactorKit: e9a57be0441a28878c418f5fea0f8f2587570563
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
-  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
-  RxExpect: b5b995662f56e8efa3c15a600b187b07f0578b44
-  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
-  RxTest: beb6beb882cf1dcac5fc9fdbd4760a5254e7f3a6
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Nimble: 3835ba9f459daa6b347f8a8e110aaae8ca1920a8
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  ReactorKit: 26470a9eff5094fae909a30af0be7cd0cf8a182d
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 36f4319052a59e7fbb04037f330fb472cf67a1df
+PODFILE CHECKSUM: 3b5c5b89593f1025ce58d08ae2f43bc1c32799de
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

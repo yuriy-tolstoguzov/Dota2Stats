@@ -13,9 +13,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    fileprivate let serviceProvider: ServiceProviderType = ServiceProvider()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let controller = (window?.rootViewController as! UINavigationController).viewControllers.first! as! MatchesViewController
+        controller.reactor = MatchesReactor(provider: serviceProvider)
+
         return true
     }
 

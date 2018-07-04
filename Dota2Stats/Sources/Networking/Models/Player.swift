@@ -10,43 +10,41 @@
 import SwiftyJSON;
 
 
-class Player {
+struct Player {
 
-    let steamID: String;
-    let communityVisibilityState: Bool;
-    let profileState: String;
-    let personaName: String;
-    let lastLogoff: String;
-    let profileURL: String;
-    let avatar: String;
-    let avatarMedium: String;
-    let avatarFull: String;
-    let personaState: Int;
-    let realName: String;
-    let timeCreated: String;
-    let primaryClanID: String;
-    let locCountryCode: String;
-    let locStateCode: String;
-    let locCityID: Int;
+    let accountID: Int
+    let heroID: Int?
+    let name: String
+    let team: Int?
 
+    init?(_ attributes: JSON) {
+        guard let accountID = attributes["account_id"].int,
+            let name = attributes["name"].string else {
+                return nil
+        }
 
-    init ( attributes: JSON) {
-        steamID = attributes["steamid"].stringValue;
-        communityVisibilityState = attributes["communityvisibilitystate"].boolValue;
-        profileState = attributes["profilestate"].stringValue;
-        personaName = attributes["personaname"].stringValue;
-        lastLogoff = attributes["lastlogoff"].stringValue;
-        profileURL = attributes["profileurl"].stringValue;
-        avatar = attributes["avatar"].stringValue;
-        avatarMedium = attributes["avatarmedium"].stringValue;
-        avatarFull = attributes["avatarfull"].stringValue;
-        personaState = attributes["personastate"].intValue;
-        realName = attributes["realname"].stringValue;
-        primaryClanID = attributes["primaryclanid"].stringValue;
-        timeCreated = attributes["timecreated"].stringValue;
-        locCountryCode = attributes["loccountrycode"].stringValue;
-        locStateCode = attributes["locstatecode"].stringValue;
-        locCityID = attributes["loccityid"].intValue;
+        self.accountID = accountID
+        self.name = name
+        heroID = attributes["hero_id"].int
+        team = attributes["team"].int
     }
     
+}
+
+
+extension Player: Equatable {
+    
+    public static func ==(lhs: Player, rhs: Player) -> Bool {
+        return lhs.accountID == rhs.accountID
+    }
+    
+}
+
+
+extension Player: CustomStringConvertible {
+
+    var description: String {
+        return "{ \(accountID): \(name) }"
+    }
+
 }

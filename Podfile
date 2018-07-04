@@ -6,12 +6,18 @@ target 'Dota2Stats' do
   pod 'ReactorKit'
   pod 'Moya/RxSwift'
   pod 'SwiftyJSON'
+  pod 'RxCocoa'
+  pod 'RxSwiftExt'
+  pod 'RxDataSources'
+  pod 'SwiftGen'
+  pod 'Kingfisher'
+  pod 'PureLayout'
 
   target 'Dota2StatsTests' do
-    inherit! :search_paths
+    inherit! :complete
 
-    pod 'RxTest'
-    pod 'RxExpect'
+    pod 'Quick'
+    pod 'Nimble'
   end
 
 end

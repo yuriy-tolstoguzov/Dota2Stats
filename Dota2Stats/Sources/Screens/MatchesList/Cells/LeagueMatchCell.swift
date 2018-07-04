@@ -15,13 +15,11 @@ class LeagueMatchCell : UITableViewCell {
     @IBOutlet weak var secondTeamLabel: UILabel!
     @IBOutlet weak var identifierLabel: UILabel!
 
-    class func reuseIdentifier() -> String {
-        return "LeagueMatchCell"
-    }
+    static var reuseIdentifier = "LeagueMatchCell"
 
-    func configureWithMatch(match: LeagueMatch) {
-        firstTeamLabel.text = match.radiantTeam.teamName
-        secondTeamLabel.text = match.direTeam.teamName
-        identifierLabel.text = String(match.lobbyID)
+    func configure(with match: LeagueMatch) {
+        firstTeamLabel.text = match.radiantTeam?.name ?? "<no name>"
+        secondTeamLabel.text = match.direTeam?.name ?? "<no name>"
+        identifierLabel.text = String(match.id)
     }
 }
